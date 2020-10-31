@@ -9,6 +9,8 @@
 		<!-- Custom CSS -->
 		<link href='./css/style.css' rel='stylesheet'>
 		<!-- Fonts -->
+		<!-- Font Awesome -->
+		<link rel='stylesheet' href='./font-awesome/css/font-awesome.min.css'>
 	</head>
 	
 	<body>
@@ -18,9 +20,9 @@
 			<img class='logo' src='./images/logo.svg'>
 			<nav class='navbar'>
 				<ul>
-					<li>Features</li>
-					<li>Team</li>
-					<li>Sign In</li>
+					<li><a href='#'>Features</a></li>
+					<li><a href='#'>Team</a></li>
+					<li><a href='#'>Sign In</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -28,13 +30,18 @@
 
 		<main>
 			<!-- INTRO -->
+
 			<section class='intro'>
-				<div class='intro-top'></div>
+				<div class='intro-top'>
+					<div class='intro-top-size'></div>
+				</div>
 				<div class='intro-bottom'>
-					<h1>All your files in one secure location, accessible anywhere.</h1>
-					<p>Fylo stores all your most important files in one secure location. Access them wherever 
-					you need, share and collaborate with friends family, and co-workers.</p>
-					<button>Get Started</button>
+					<div class='intro-bottom-size'>
+						<h1>All your files in one secure location, accessible anywhere.</h1>
+						<p>Fylo stores all your most important files in one secure location. Access them wherever 
+						you need, share and collaborate with friends family, and co-workers.</p>
+						<button>Get Started</button>
+					</div>
 				</div>
 			</section>
 			<!-- INTRO END-->
@@ -179,9 +186,9 @@
 				</div>
 				
 				<div class='footer-social'>
-					<img class='footer-social-icon' src='./images/icon-facebook.svg'>
-					<img class='footer-social-icon' src='./images/icon-twitter.svg'>
-					<img class='footer-social-icon' src='./images/icon-instagram.svg'>
+					<div class='footer-social-icon'><i class="fa fa-facebook" aria-hidden="true"></i></div>
+					<i class="footer-social-icon fa fa-twitter" aria-hidden="true"></i>
+					<i class="footer-social-icon fa fa-instagram" aria-hidden="true"></i>
 				</div>
 			</div>
 		</footer>

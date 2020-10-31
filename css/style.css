@@ -15,7 +15,7 @@ html {
 body {
   background-color: var(--Dark-Blue-Main);
   color: white;
-  width: 375px;
+  width: 360px;
   margin: 0 auto;
 }
 button {
@@ -35,13 +35,19 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+  margin-top: 10px;
+  background-color: var(--Dark-Blue-Intro);
 }
 header .logo {
   width: 30%;
 }
 header .navbar {
   width: 50%;
+}
+header .navbar a {
+  color: white;
+  text-decoration: none;
 }
 header ul {
   display: flex;
@@ -53,10 +59,10 @@ header ul {
 /* INTRO */
 .intro {
   margin-bottom: 120px;
-  width: 90%;
+  width: 100%;
   background-color: var(--Dark-Blue-Intro);
 }
-.intro-top {
+.intro-top-size {
   height: 340px; 
   background-image: url('../images/illustration-intro.png'), url('../images/bg-curvy-mobile.svg');
   background-size: 100%, 100%;
@@ -89,14 +95,17 @@ header ul {
   margin-bottom: 150px;
 }
 .about-us article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-bottom: 100px;
+}
+.about-us article img {
+  display: block;
+  margin: 0 auto;
+  height: 100px;
 }
 .about-us h2 {
   margin-top: 30px;
   margin-bottom: 10px;
+  text-align: center;
 }
 .about-us p {
   text-align: center;
@@ -254,11 +263,181 @@ footer .footer-social {
   justify-content: space-between;
   margin-bottom: 30px;
 }
-footer .footer-social img {
-  width: 25%;
+footer .footer-social-icon {
+  width: 30px;
+  height: 30px;
   border-radius: 100%;
   border: 1px solid white;
-  padding: 8px;
+  text-align: center;
+  padding: 5px 5px;
+}
+
+@media (min-width: 768px) {
+  body {
+    width: 100%;
+  }
+  header {
+
+  }
+  header .logo {
+    width: 150px;
+  }
+  header .navbar {
+    width: 30%;
+  }
+  .intro-top-size {
+    width: 60%;
+    height: 420px;
+    margin: 0 auto;
+    background-image: url('../images/illustration-intro.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .intro-bottom-size {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .intro-top {
+    margin-bottom: 40px;
+  }
+  .intro-bottom {
+    background-color: var(--Dark-Blue-Intro);
+    background-image: url('../images/bg-curvy-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+  }
+  .intro-bottom h1 {
+    top: 0;
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+  }
+  .intro-bottom p {
+    width: 80%;
+    top: 0;
+    font-size: 1rem;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .intro-bottom button {
+    width: 50%;
+  }
+  .about-us {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .about-us-top, .about-us-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  .about-us article {
+    width: 300px;
+  }
+  .about-us article h2 {
+    font-size: 1.3rem;
+  }
+  .about-us article p {
+    font-size: 0.9rem;
+  }
+  .productive {
+    display: flex;
+  }
+  .productive-left {
+    width: 50%;
+  }
+  .productive-right {
+    width: 50%;
+    padding-left: 50px;
+  }
+  .productive-right h2 {
+    font-size: 2.3rem;
+    text-align: left;
+  }
+  .productive-right p {
+    font-size: 0.9rem;
+  }
+  .productive-link {
+    font-size: 0.9rem;
+  }
+  .testimonials {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-size: 4%;
+    margin-bottom: 80px;
+  }
+  .testimonials article {
+    max-width: 340px;
+    height: 180px;
+  }
+  .testimonials article .personal-text {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+  .early-access {
+    position: relative;
+    bottom: -100px;
+    width: 60%;
+    margin: 0 auto;
+    height: 250px;
+    padding: 30px 50px;
+    margin-bottom: 0;
+  }
+  .early-access h2 {
+    font-size: 2.3rem;
+  }
+  .early-access p {
+    font-size: 1rem;
+  }
+  .early-access form {
+    flex-direction: row;
+  }
+  .early-access form input {
+    width: 70%;
+    margin: 0 0;
+    margin-right: 20px;
+  }
+  .early-access form button {
+    width: 30%;
+    margin: 0 0;
+  }
+  footer {
+    background-color: var(--Dark-Blue-Footer);
+    padding-top: 180px;
+  }
+  footer .footer-logo {
+    width: 150px;
+  }
+  .footer-text {
+    display: flex;
+  }
+  .footer-contact-table {
+    display: flex;
+    width: 60%;
+  }
+  footer .table-icon {
+    width: 15px;
+    flex-shrink: 0;
+  }
+  footer .table-left {
+    width: 60%;
+    margin-right: 30px;
+  }
+  footer .table-text {
+    font-size: 1.1rem; 
+  }
+  footer .footer-about-us {
+    margin: 0 0;
+    width: 15%;
+  }
+  footer .footer-contact-us {
+    margin: 0 0;
+    width: 15%;
+  }
+  footer .footer-social {
+    width: 10%;
+    align-items: flex-start;
+  }
 }
 
 .attribution { 

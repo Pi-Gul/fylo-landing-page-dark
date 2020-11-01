@@ -10,7 +10,7 @@ html {
   --Dark-Blue-Testimonials: hsl(219, 30%, 18%);
   --Cyan: hsl(176, 68%, 64%);
   --Blue: hsl(198, 60%, 50%);
-  font-size: 16px;
+  font-size: 14px;
 }
 body {
   background-color: var(--Dark-Blue-Main);
@@ -28,6 +28,16 @@ button {
   color: white;
   font-weight: bold;
   background-image: linear-gradient(to right, var(--Cyan), var(--Blue));
+}
+button:hover {
+  filter: brightness(110%);
+  cursor: pointer;
+}
+h1, h2, h3, button, .navbar a, footer a {
+  font-family: 'Raleway', sans-serif;
+}
+p, span {
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* HEADER */
@@ -48,6 +58,9 @@ header .navbar {
 header .navbar a {
   color: white;
   text-decoration: none;
+}
+header .navbar a:hover {
+  color: var(--Cyan);
 }
 header ul {
   display: flex;
@@ -239,6 +252,9 @@ footer .table-text {
 footer .footer-contact-table {
   margin-bottom: 70px;
 }
+footer .table-right .table {
+  align-items: center;
+}
 footer ul {
   list-style: none;
 }
@@ -247,10 +263,15 @@ footer ul li {
 }
 footer h3 {
   font-weight: normal;
+  font-size: 1rem;
 }
 footer a {
   text-decoration: none;
   color: white;
+  font-size: 1rem;
+}
+footer a:hover {
+  color: var(--Cyan);
 }
 footer .footer-contact-us {
   margin-top: 40px;
@@ -269,15 +290,23 @@ footer .footer-social-icon {
   border-radius: 100%;
   border: 1px solid white;
   text-align: center;
-  padding: 5px 5px;
+  padding-top: 6px;
+  padding-left: 1px;
+}
+footer .footer-social-icon:hover {
+  color: var(--Cyan);
+  border: 1px solid var(--Cyan);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   body {
     width: 100%;
   }
+  .header-size, .productive-size, .testimonials-size, .footer-size {
+    width: 100%;
+  }
   header {
-
+    padding: 40px 60px 0 60px;
   }
   header .logo {
     width: 150px;
@@ -285,16 +314,19 @@ footer .footer-social-icon {
   header .navbar {
     width: 30%;
   }
+  .intro {
+    margin-bottom: 0;
+  }
   .intro-top-size {
-    width: 60%;
-    height: 420px;
+    max-width: 850px;
+    height: 500px;
     margin: 0 auto;
     background-image: url('../images/illustration-intro.png');
-    background-size: cover;
+    background-size: 80%;
     background-repeat: no-repeat;
   }
   .intro-bottom-size {
-    width: 60%;
+    max-width: 850px;
     margin: 0 auto;
   }
   .intro-top {
@@ -305,7 +337,8 @@ footer .footer-social-icon {
     background-image: url('../images/bg-curvy-desktop.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
+    background-position: 0px 0px;
+    height: 400px;
   }
   .intro-bottom h1 {
     top: 0;
@@ -323,7 +356,7 @@ footer .footer-social-icon {
     width: 50%;
   }
   .about-us {
-    width: 70%;
+    max-width: 900px;
     margin: 0 auto;
   }
   .about-us-top, .about-us-bottom {
@@ -341,13 +374,19 @@ footer .footer-social-icon {
   }
   .productive {
     display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
   }
   .productive-left {
-    width: 50%;
-  }
+    width: 55%;
+    height: 400px;
+    background-size: 85%;
+    background-repeat: no-repeat;
+}
   .productive-right {
-    width: 50%;
-    padding-left: 50px;
+    width: 45%;
+    padding-left: 0px;
+    padding-top: 80px;
   }
   .productive-right h2 {
     font-size: 2.3rem;
@@ -358,16 +397,22 @@ footer .footer-social-icon {
   }
   .productive-link {
     font-size: 0.9rem;
+    width: 140px;
   }
   .testimonials {
     width: 100%;
     display: flex;
     justify-content: space-between;
     background-size: 4%;
+    background-position: -1px 10px;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-bottom: 80px;
+    max-width: 1200px;
   }
   .testimonials article {
-    max-width: 340px;
+    max-width: 360px;
     height: 180px;
   }
   .testimonials article .personal-text {
@@ -377,7 +422,7 @@ footer .footer-social-icon {
   .early-access {
     position: relative;
     bottom: -100px;
-    width: 60%;
+    max-width: 900px;
     margin: 0 auto;
     height: 250px;
     padding: 30px 50px;
@@ -404,6 +449,8 @@ footer .footer-social-icon {
   footer {
     background-color: var(--Dark-Blue-Footer);
     padding-top: 180px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
   footer .footer-logo {
     width: 150px;
@@ -423,8 +470,14 @@ footer .footer-social-icon {
     width: 60%;
     margin-right: 30px;
   }
-  footer .table-text {
-    font-size: 1.1rem; 
+  footer .table-left .table-text {
+    font-size: 1rem;
+  }
+  footer .table-right .table-text {
+    font-size: 0.9rem;
+  }
+  footer .table-right .table {
+    align-items: center;
   }
   footer .footer-about-us {
     margin: 0 0;
@@ -437,6 +490,14 @@ footer .footer-social-icon {
   footer .footer-social {
     width: 10%;
     align-items: flex-start;
+  }
+  footer .footer-social-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid white;
+    text-align: center;
+    padding: 7px 1px 1px 2px;
   }
 }
 

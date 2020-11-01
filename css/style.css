@@ -299,6 +299,9 @@ footer .footer-social-icon:hover {
 }
 
 @media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
   body {
     width: 100%;
   }
@@ -316,6 +319,7 @@ footer .footer-social-icon:hover {
   }
   .intro {
     margin-bottom: 0;
+    padding-top: 50px;
   }
   .intro-top-size {
     max-width: 850px;
@@ -376,10 +380,11 @@ footer .footer-social-icon:hover {
     display: flex;
     max-width: 1300px;
     margin: 0 auto;
+    margin-bottom: 100px;
   }
   .productive-left {
     width: 55%;
-    height: 400px;
+    height: 450px;
     background-size: 85%;
     background-repeat: no-repeat;
 }
@@ -397,7 +402,7 @@ footer .footer-social-icon:hover {
   }
   .productive-link {
     font-size: 0.9rem;
-    width: 140px;
+    width: 155px;
   }
   .testimonials {
     width: 100%;
